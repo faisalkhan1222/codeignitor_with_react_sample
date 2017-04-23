@@ -1,4 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
 <script type="text/babel">
 	<?php include __DIR__ . "/react_components/{$_component_name}.jsx"; ?>
 </script>
