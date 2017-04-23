@@ -469,3 +469,8 @@ $config['time_reference'] = 'local';
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+/**
+ * Put the theme name here. By Default, it points to the react theme. Put empty for default codeigniter functionality.
+ */
+$config['theme'] = 'react';
