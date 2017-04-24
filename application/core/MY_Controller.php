@@ -27,13 +27,13 @@ class MY_Controller extends CI_Controller {
 	 */
 	protected function render_page( $view, $vars = array() ) {
 
-		$vars['_component_dom_tag_id'] = 'content';
+		$vars['_module_dom_tag_id'] = 'content';
 		$base_vars['content'] = $this->get_component( $view, $vars );
 
-		$vars['_component_dom_tag_id'] = 'header';
+		$vars['_module_dom_tag_id'] = 'header';
 		$base_vars['header'] = $this->get_component( 'header', $vars );
 
-		$vars['_component_dom_tag_id'] = 'footer';
+		$vars['_module_dom_tag_id'] = 'footer';
 		$base_vars['footer'] = $this->get_component( 'footer', $vars );
 
 		$this->load->view( $this->theme_base . 'base', $base_vars, FALSE );
@@ -46,7 +46,7 @@ class MY_Controller extends CI_Controller {
 	 * @return [string]       [HTML of the partial view]
 	 */
 	protected function get_component( $view, $vars = array() ) {
-		$vars['_component_name'] = $view;
+		$vars['_module_name'] = $view;
 		return $this->load->view( $this->theme_base . 'content', $vars, TRUE );
 	}
 }
