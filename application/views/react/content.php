@@ -6,11 +6,7 @@
 
 <?php
 	// Get component class name to render it.
-	$module_class = str_replace('_', '', ucwords($_module_name, '_'));
-
-	if( strpos( $module_class, '/' ) ) {
-		$module_class = ucwords( basename( $module_class ) );	
-	}
+	$module_class = preg_replace('/[_\/]/', '', ucwords($_module_name, '[_\/]'));
 ?>
 <script type="text/babel">	
 	ReactDOM.render( < <?php echo $module_class; ?> /> , document.getElementById( '<?php echo $_module_dom_tag_id; ?>' ) );
