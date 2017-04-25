@@ -28,6 +28,7 @@ class MY_Controller extends CI_Controller {
 	 */
 	protected function render_view( $view, $vars = array() ) {
 		$vars['content'] = $this->get_component_view( $view, $vars );
+		// Pass variables to React Views using $vars['react_vars']
 		$this->load->view( $this->theme_base . 'base', $vars, FALSE );
 	}
 
@@ -39,6 +40,7 @@ class MY_Controller extends CI_Controller {
 	 */
 	protected function get_component_view( $view, $vars = array() ) {
 		$vars['_module_name'] = $view;
+		// Pass variables to React Views using $vars['react_vars']
 		return $this->load->view( $this->theme_base . 'content', $vars, TRUE );
 	}
 }
