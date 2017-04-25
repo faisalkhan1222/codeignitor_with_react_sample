@@ -4,6 +4,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Welcome to the React Application using Codeigniter.</title>
 		<link href="/css/lib/bootstrap.min.css" rel="stylesheet">
 		<link href="/css/style.css" rel="stylesheet">
@@ -16,7 +17,7 @@
 		</script>
 	</head>
 	<body>
-		<div class="container" id="content">
+		<div class="container-fluid" id="content">
 			<?php echo $content; ?>
 		</div>
 		<script src="/js/lib/react.js"></script>
