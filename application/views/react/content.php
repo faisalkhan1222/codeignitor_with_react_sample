@@ -5,11 +5,7 @@
 		$include_file = "/js/react/components/{$_module_name}.js";
 	?>
 	System.import('<?php echo $include_file; ?>').then(function(module) {
-
-		<?php if( isset($react_vars)) : ?>
-			var props = <?php echo json_encode($react_vars, JSON_FORCE_OBJECT); ?>;
-		<?php endif; ?>
-
+		var props = <?php echo json_encode($react_vars, JSON_FORCE_OBJECT); ?>;
 		ReactDOM.render( React.createElement(module.default, props), document.getElementById('content') )
 	})
 </script>

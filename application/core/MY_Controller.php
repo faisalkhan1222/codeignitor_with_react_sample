@@ -30,6 +30,9 @@ class MY_Controller extends CI_Controller {
 		$vars['content'] = $this->get_component_view( $view, $vars );
 		// Pass variables to React Views using associative arrays to $vars['react_vars']
 		// like $vars['react_vars'] = array( 'message' => 'Welcome to CodeIgniter React ');
+		if( ! isset( $vars['react_vars'] ) ) {
+			$vars['react_vars'] = [];
+		}
 		$this->load->view( $this->theme_base . 'base', $vars, FALSE );
 	}
 
@@ -43,6 +46,9 @@ class MY_Controller extends CI_Controller {
 		$vars['_module_name'] = $view;
 		// Pass variables to React Views using associative arrays to $vars['react_vars']
 		// like $vars['react_vars'] = array( 'message' => 'Welcome to CodeIgniter React ');
+		if( ! isset( $vars['react_vars'] ) ) {
+			$vars['react_vars'] = [];
+		}
 		return $this->load->view( $this->theme_base . 'content', $vars, TRUE );
 	}
 }
