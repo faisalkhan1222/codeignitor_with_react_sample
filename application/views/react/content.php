@@ -4,5 +4,8 @@
 	<?php
 		$include_file = "/js/react/components/{$_module_name}.js";
 	?>
-	System.import('<?php echo $include_file; ?>');
+	System.import('<?php echo $include_file; ?>').then(function(module) {
+		var props = {}
+		ReactDOM.render( React.createElement(module.default, props), document.getElementById('content') )
+	})
 </script>
