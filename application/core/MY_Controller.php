@@ -14,6 +14,7 @@ class MY_Controller extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$config = $this->config->config;
+		$this->load->library( 'session' );
 
 		if ( isset( $config['theme'] ) && ! empty( $config['theme'] ) ) {
 			$this->theme_base = $config['theme'] . '/';
@@ -28,15 +29,8 @@ class MY_Controller extends CI_Controller {
 	protected function render_view( $view, $vars = array() ) {
 
 		$vars['_module_dom_tag_id'] = 'content';
-		$base_vars['content'] = $this->get_component_view( $view, $vars );
-
-		$vars['_module_dom_tag_id'] = 'header';
-		$base_vars['header'] = $this->get_component_view( 'header', $vars );
-
-		$vars['_module_dom_tag_id'] = 'footer';
-		$base_vars['footer'] = $this->get_component_view( 'footer', $vars );
-
-		$this->load->view( $this->theme_base . 'base', $base_vars, FALSE );
+		$vars['content'] = $this->get_component_view( $view, $vars );
+		$this->load->view( $this->theme_base . 'base', $vars, FALSE );
 	}
 
 	/**
