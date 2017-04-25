@@ -27,8 +27,6 @@ class MY_Controller extends CI_Controller {
 	 * @param  array  $vars [additional variables to pass to the view].
 	 */
 	protected function render_view( $view, $vars = array() ) {
-
-		$vars['_module_dom_tag_id'] = 'content';
 		$vars['content'] = $this->get_component_view( $view, $vars );
 		$this->load->view( $this->theme_base . 'base', $vars, FALSE );
 	}
