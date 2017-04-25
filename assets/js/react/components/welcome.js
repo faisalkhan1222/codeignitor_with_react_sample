@@ -8,7 +8,7 @@ class Welcome extends React.Component {
 		return (
 			< AppContainer>
 				<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
+				<p>{this.props.message}</p>
                 <p>If you would like to edit this page you'll find it located at:</p>
                 <code>assets/js/react/components/welcome.js</code>
 
@@ -22,5 +22,3 @@ class Welcome extends React.Component {
 }
 
 export default Welcome
-
-ReactDOM.render( <Welcome /> , document.getElementById( 'content' ) );
