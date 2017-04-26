@@ -20,6 +20,6 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
-		$this->render_page( 'welcome' );
+		$this->render_view( 'welcome' );
 	}
 }

@@ -1,4 +1,12 @@
 ###################
+CodeIgniter with React
+###################
+
+CodeIgniter code is little bit changed to accommodate theming structure. Also there are significant changes done and some are in progress, to support rendering using React JS.
+
+The changes are done in such a way, which put this repository in the state, in which it can be used in multiple ways, the default being rendering the views using React and it supports the default CodeIgniter views also.
+
+###################
 What is CodeIgniter
 ###################
 

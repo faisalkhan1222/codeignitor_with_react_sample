@@ -4,22 +4,24 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<?php echo $meta_tags; ?>
 		<title>Welcome to the React Application using Codeigniter.</title>
-		<link href="/assets/css/lib/bootstrap.min.css" rel="stylesheet">
-		<link href="/assets/css/style.css" rel="stylesheet">
+		<link href="/css/lib/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+		<script src="/js/lib/jspm-system.js"></script>
+		<script>
+			System.config({
+			  transpiler: 'babel',
+			  babelOptions: {}
+			});
+		</script>
 	</head>
 	<body>
-		<header id="header">
-			<?php echo $header; ?>
-		</header>
-		<div id="content" class="container">
+		<div class="container-fluid" id="content">
 			<?php echo $content; ?>
 		</div>
-		<footer id="footer">
-			<?php echo $footer; ?>
-		</footer>
-		<script src="/assets/js/lib/react.js"></script>
-		<script src="/assets/js/lib/react-dom.js"></script>
-		<script src="/assets/js/lib/babel.min.js"></script>
+		<script src="/js/lib/react.js"></script>
+		<script src="/js/lib/react-dom.js"></script>
 	</body>
 </html>
