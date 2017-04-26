@@ -28,11 +28,6 @@ class MY_Controller extends CI_Controller {
 	 */
 	protected function render_view( $view, $vars = array() ) {
 		$vars['content'] = $this->get_component_view( $view, $vars );
-		// Pass variables to React Views using associative arrays to $vars['react_vars']
-		// like $vars['react_vars'] = array( 'message' => 'Welcome to CodeIgniter React ');
-		if( ! isset( $vars['react_vars'] ) ) {
-			$vars['react_vars'] = [];
-		}
 		$this->load->view( $this->theme_base . 'base', $vars, FALSE );
 	}
 
