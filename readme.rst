@@ -18,14 +18,6 @@ interface and logical structure to access these libraries. CodeIgniter lets
 you creatively focus on your project by minimizing the amount of code needed
 for a given task.
 
-###################
-CodeIgniter with React
-###################
-
-CodeIgniter code is little bit changed to accommodate theming structure. Also there are significant changes done and some are in progress, to support rendering using React JS.
-
-The changes are done in such a way, which put this repository in the state, in which it can be used in multiple ways, the default being rendering the views using React and it supports the default CodeIgniter views also.
-
 *******************
 Release Information
 *******************
@@ -47,7 +39,7 @@ Server Requirements
 
 PHP version 5.6 or newer is recommended.
 
-It should work on 5.4.8 as well, but we strongly advise you NOT to run
+It should work on 5.3.7 as well, but we strongly advise you NOT to run
 such old versions of PHP, because of potential security and performance
 issues, as well as missing features.
 
