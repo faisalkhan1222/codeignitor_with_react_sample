@@ -10,6 +10,7 @@
 		<link href="/css/lib/bootstrap.min.css" rel="stylesheet">
 		<link href="/css/style.css" rel="stylesheet">
 		<script src="/js/lib/jspm-system.js"></script>
+		<script src="/js/lib/browser.js"></script>
 		<script>
 			System.config({
 			  transpiler: 'babel',
