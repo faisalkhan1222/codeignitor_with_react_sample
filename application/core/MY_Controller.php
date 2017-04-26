@@ -28,6 +28,7 @@ class MY_Controller extends CI_Controller {
 	 */
 	protected function render_view( $view, $vars = array() ) {
 		$vars['content'] = $this->get_component_view( $view, $vars );
+		$vars['meta_tags'] = $this->load->view( $this->theme_base . 'meta', $vars, TRUE );
 		$this->load->view( $this->theme_base . 'base', $vars, FALSE );
 	}
 
