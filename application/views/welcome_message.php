@@ -99,7 +99,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</h1>
 
 		<div id="body">
-			<p>Code Ignitor with React</p>
 			<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
 			<p>If you would like to edit this page you'll find it located at:</p>
